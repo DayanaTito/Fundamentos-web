@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./Styles/reset.css">
+    <link rel="stylesheet" href="./assents/reset.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./assents/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Contato</title>
@@ -22,23 +22,49 @@
         </div>
     </header>
     <main class="estruturacontato">
-        <form>
+        <form onsubmit="enviar()">
             <label for="Nomecompleto:" > Nome completo: </label>
             <input type="text" id="Nomecompleto:" class="input-padrao" required>
             <label for="E-mail:"> E-mail: </label>
-            <input type="email" id="E-mail:" class="input-padrao" required>
+            <input type="email" id="E-mail:" class="input-padrao" required >
             <label for="Celular:">Celular:</label>
             <input type="tel" id="Celular:"class="input-padrao" required>
+
+            <label for="Assunto:"> Assunto: </label>
+            <input type="text" id="Assunto:" class="input-padrao" required>
 
             <label for="mensagem">Mensagem:</label>
             <textarea cols="70" rows="10" id="mensagem" class="input-padrao" ></textarea>
 
+            <fieldset>  
+                <legend>Como prefere nosso contato?</legend>
+    
+                <label for="radio-E-mail"><input type="radio" name="contato" value="E-mail" id="radio-E-mail">E-mail</label>
+                <label for="radio-Celular"><input type="radio" name="contato" value="Celular" id="radio-Celular">Celular</label>
+                <label for="radio-WhatsApp"><input type="radio" name="contato"  value="WhatsApp" id="radio-WhatsApp" checked>WhatsApp</label>
+                
+             </fieldset>  
+    
+             <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend> 
+                 <select>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                 </select>
+             </fieldset>
+    
+             <label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por E-mail?</label>
+
             <input type="submit" value="Enviar" class="enviar">
+            
+             <button>Clica em mim </button>
+            
         </form>
     </main>
 
     <section class="mapa">
-        <h2 class="titulo-principal ">Nosso estabelecimento </h2>
+        <h2>Nosso estabelecimento </h2>
         <p>Nosso estabelecimento esta localizado no coração da cidade.</p>
         <div class="mapa-conteudo">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14629.60006964418!2d-46.65984061728112!3d-23.554072635008446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59caaaacb22d%3A0xf14864d2aa14537e!2zQ29uc29sYcOnw6NvLCBTw6NvIFBhdWxvIC0gU1A!5e0!3m2!1spt-BR!2sbr!4v1652977399985!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -47,5 +73,17 @@
     <footer>
         <p class="copyright"> &copy; copyright Tito Consultoria </p>
     </footer>
+
+    <script src="./assents/scripts/script.js"></script>
+
+    <!--Sempre por JS depois de todo o código em html, mas antes de fechar o body
+        JAVASCRIPT LINGUAGEM DE PROGRAMAÇÃO 
+    <script>
+        var nome = "Turma 49";
+
+        function hello(){
+            alert( nome + " está aprendendo JS")    
+        }
+    </script>-->
 </body>
 </html>

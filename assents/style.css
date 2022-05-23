@@ -57,11 +57,14 @@ nav li {
 
 .mapa {
     padding: 3em 0;
+    display: block;
+    text-align: center;
 }
 
 .mapa-conteudo{
     width: 940px;
     margin: 0 auto;
+
 }
 
 .mapa p {
@@ -71,6 +74,12 @@ nav li {
 
 
 /*CSS CONTATO*/
+
+h2{
+    text-align: center;
+    color: #000000;
+    }
+
 nav a {
     text-transform: uppercase;
     color:ghostwhite;
