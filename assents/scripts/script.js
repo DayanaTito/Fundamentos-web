@@ -37,4 +37,16 @@
         }
     }
 
+    function emailValidation(){
+        let txtEmail = document.querySelector("#txtEmail")
+        if(email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1){
+            txtEmail.innerHTML = "Email is invalid"
+            txtEmail.style.color = "red"
+        }else{
+            txtEmail.innerHTML = "Email is valid"
+            txtEmail.style.color = "green"
+            emailOk = true
+        }
+    }
+
 
